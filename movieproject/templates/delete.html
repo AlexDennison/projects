@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<form method="post" style="color: red;">
+    {%csrf_token %}
+    <h1>Do you want to permanently delete this movie?</h1>
+    <input type="submit" value="Yes, Delete!">
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+ <form method="post" enctype="multipart/form-data" id="movie_details" style="text-align: center; font-size:x-large;">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Enter Movie Name"><br>
+    <input type="file" name="image"><br>
+    <input type="text" name="overview" placeholder="Enter Storyline"><br>
+    <input type="text" name="year" placeholder="Enter movie release year"><br>
+    <input type="text" name="genre" placeholder="Enter Movie Genre"><br>
+    <input type="text" name="rating" placeholder="Enter Movie Rating"><br>
+    <input type='submit' value="Add Movie">
+</form>
+
+{% endblock %}
